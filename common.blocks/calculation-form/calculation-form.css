@@ -1,0 +1,8 @@
+.calculation-form {
+  width: 400px;
+  padding: 40px 20px 40px 30px;
+  border: 1px solid black;
+  margin: 20px auto 0;
+  background-color: #D9D9D9;
+  font: 20px Arial, Helvetica, sans-serif;
+}

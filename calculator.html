@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <title>Калькулятор</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="common.blocks/calculation-form/calculation-form.css" rel="stylesheet">
+  <link href="common.blocks/form-group/form-group.css" rel="stylesheet">
+  <link href="common.blocks/form-group/__input-text/form-group__input-text.css" rel="stylesheet">
+  <link href="common.blocks/form-group/__input-text/_disabled/form-group__input-text_disabled.css" rel="stylesheet">
+  <link href="common.blocks/form-group/__input-text/_warning/form-group__input-text_warning.css" rel="stylesheet">
+  <link href="" rel="stylesheet">
+</head>
+<body>
+  <div class="calculation-form">
+    <div class="form-group">
+      <label for="sum" class="form-group__label">Сумма:</label>
+      <input type="text" id="sum" class="form-group__input-text" pattern="^\d+(\.?\d*)?$">
+    </div>
+    <div class="form-group">
+      <label for="rate" class="form-group__label">Курс:</label>
+      <input type="text" id="rate" class="form-group__input-text">
+    </div>
+    <div class="form-group">
+      <label for="total" class="form-group__label">Итого:</label>
+      <input type="text" id="total" class="form-group__input-text form-group__input-text_disabled" disabled>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
