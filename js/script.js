@@ -9,8 +9,11 @@ sumField.onkeyup = main;
 rateField.onkeyup = main;
 
 function main(){
+  resetTotalField();
+  
   if(!checkInputValue(this.value)){    
-    this.value = doCorrectValue(this.value);   
+    this.value = doCorrectValue(this.value);  
+    processOverflow(0); 
     return false;
   }
   
@@ -19,10 +22,10 @@ function main(){
     let rate = parseFloat(rateField.value);
     let total = calculateTotal(sum, rate, commission);
 
-    totalField.value = total;
+    totalField.value = total;  
 
-    processOverflow(total);
-  }
+    processOverflow(total); 
+  } 
 }
 
 function checkInputValue(value){
@@ -54,4 +57,9 @@ function addClass(element, className){
 
 function removeClass(element, className){
   element.classList.remove(className);
+}
+
+function resetTotalField() {
+  totalField.value = "";
+  processOverflow(0);
 }
